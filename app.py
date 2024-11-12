@@ -17,7 +17,7 @@ def htop():
     response = f"""
     <html>
     <body>
-        <h1>System Info</h1>
+        
         <p><strong>Name:</strong> {name}</p>
         <p><strong>User:</strong> {username}</p>
         <p><strong>Server Time (IST):</strong> {server_time}</p>
