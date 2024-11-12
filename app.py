@@ -7,13 +7,13 @@ app = Flask(__name__)
 
 @app.route('/htop')
 def htop():
-    # Fetch the required details
+  
     name = "Hari Vittal Appinedi"  # Replace with your full name
     username = os.getenv("USER") or os.getenv("USERNAME") or "Unknown User"
     server_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
     top_output = subprocess.check_output("top -b -n 1 | head -n 20", shell=True).decode()
 
-    # Generate HTML response
+    
     response = f"""
     <html>
     <body>
@@ -28,5 +28,5 @@ def htop():
     return response
 
 if __name__ == "__main__":
-    # Run the Flask application on all interfaces
-    app.run(host="0.0.0.0", port=8080)
+   
+    app.run(host="0.0.0.0", port=3000)
